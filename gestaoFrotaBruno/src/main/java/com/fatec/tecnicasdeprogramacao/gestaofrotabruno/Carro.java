@@ -1,7 +1,7 @@
 package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
 
 
-public abstract class Carro extends Veiculo implements Seguravel {
+public class Carro extends Veiculo implements Seguravel {
     
     private String cor;
     private String modelo;
@@ -77,7 +77,7 @@ public abstract class Carro extends Veiculo implements Seguravel {
     }
 
 
-    
+
     
     @Override
     public void manutencao() {

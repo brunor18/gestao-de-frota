@@ -13,8 +13,7 @@ public abstract class Veiculo {
         this.valorVenal = valorVenal;
     } 
 
-    // Polimorfismo: método que será sobrescrito 
-    public abstract void emitirRelatorio(); 
+
     public abstract void manutencao();
     public abstract void calcularIpva();
 

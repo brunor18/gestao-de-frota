@@ -1,6 +1,6 @@
 package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
 
-public abstract class Caminhao extends Veiculo {
+public class Caminhao extends Veiculo {
     private String cor;
     private String modelo;
     private String marca;
@@ -84,5 +84,10 @@ public abstract class Caminhao extends Veiculo {
     @Override
     public void calcularIpva() {
         setIpva(getValorVenal() * 0.015); // acessa via getter/setter
+    }
+
+    @Override
+    public void manutencao() {
+        System.out.println("Manutenção de caminhao: verificando óleo e pneus");
     }
 }

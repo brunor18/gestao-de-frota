@@ -1,7 +1,7 @@
 package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
 
 
-public abstract class Moto extends Veiculo {
+public class Moto extends Veiculo {
     
     private String cor;
     private String modelo;
@@ -79,7 +79,10 @@ public abstract class Moto extends Veiculo {
 
 
 
-
+    @Override
+    public void calcularIpva() {
+        setIpva(getValorVenal() * 0.04);
+    }
 
     @Override
     public void manutencao() {

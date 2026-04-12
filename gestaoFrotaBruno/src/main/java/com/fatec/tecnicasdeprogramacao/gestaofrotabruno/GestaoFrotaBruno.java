@@ -3,6 +3,7 @@
  */
 
 package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
+import java.util.ArrayList;
 
 /**
  *
@@ -10,7 +11,17 @@ package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
  */
 public class GestaoFrotaBruno {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    ArrayList<Veiculo> frota = new ArrayList<>();
+
+    public void adicionarVeiculo(Veiculo veiculo) {
+        frota.add(veiculo);
+    }
+
+    public void exibirIpvaDaFrota() {
+        for (Veiculo veiculo : frota) {
+            System.out.println("Placa do veículo " + veiculo.getPlaca());
+            System.out.println("IPVA: R$ " + veiculo.getIpva());
+            System.out.println("----------\n");
+        }
     }
 }
