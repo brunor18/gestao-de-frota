@@ -5,19 +5,34 @@ public abstract class Veiculo {
     private String placa; 
     private double nivelCombustivel; 
     private double ipva;
-    private double valor;
+    private double valorVenal;
     
     
-    public Veiculo(String placa) { 
+    public Veiculo(String placa, double valorVenal) { 
         this.placa = placa; 
+        this.valorVenal = valorVenal;
     } 
+
+    // Polimorfismo: método que será sobrescrito 
+    public abstract void emitirRelatorio(); 
+    public abstract void manutencao();
+    public abstract void calcularIpva();
+
+
     // Encapsulamento 
     public String getPlaca() {
         return placa; 
     } 
-    // Polimorfismo: método que será sobrescrito 
-    public abstract void emitirRelatorio(); 
 
-    public abstract void manutencao();
-
+    public Double getValorVenal(){
+        return valorVenal;
     }
+
+    public Double getIpva(){
+        return ipva;
+    }
+
+    protected void setIpva(double ipva){
+        this.ipva = ipva;
+    }
+}

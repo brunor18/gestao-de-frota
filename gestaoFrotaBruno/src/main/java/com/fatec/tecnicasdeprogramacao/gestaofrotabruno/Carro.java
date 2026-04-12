@@ -12,8 +12,9 @@ public abstract class Carro extends Veiculo {
     private double nivelCombustivel;
     private int numeroDePortas;
 
-    public Carro(String placa) {
-        super(placa);
+    public Carro(String placa, double valorVenal) {
+        super(placa, valorVenal);
+        calcularIpva();
     }
     
     public void setCor(String cor){
@@ -49,4 +50,8 @@ public abstract class Carro extends Veiculo {
         System.out.println("Manutenção de carro: verificando óleo e pneus");
     }
     
+    @Override
+    public void calcularIpva() {
+        setIpva(getValorVenal() * 0.04);
+    }
 }

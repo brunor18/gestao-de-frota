@@ -12,14 +12,15 @@ public abstract class Moto extends Veiculo {
     private double nivelCombustivel;
     private int cilindradas;
 
-    public Moto(String placa) {
-        super(placa);
+    public Moto(String placa, double valorVenal) {
+        super(placa, valorVenal);
+        calcularIpva();
     }
     
     public void setCor(String cor){
         this.cor = cor;
     }
-    
+
     public void setModelo(String modelo){
         this.modelo = modelo;
     }
@@ -49,5 +50,6 @@ public abstract class Moto extends Veiculo {
     public void manutencao() {
         System.out.println("Manutenção de moto: verificando corrente");
     }
+    
     
 }
