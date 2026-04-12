@@ -1,7 +1,7 @@
 package com.fatec.tecnicasdeprogramacao.gestaofrotabruno;
 
 
-public abstract class Carro extends Veiculo {
+public abstract class Moto extends Veiculo {
     
     private String cor;
     private String modelo;
@@ -10,9 +10,9 @@ public abstract class Carro extends Veiculo {
     private String tipo;
     
     private double nivelCombustivel;
-    private int numeroDePortas;
+    private int cilindradas;
 
-    public Carro(String placa) {
+    public Moto(String placa) {
         super(placa);
     }
     
@@ -35,18 +35,19 @@ public abstract class Carro extends Veiculo {
     public void setTipo(String tipo){
         this.tipo = tipo;
     }
+
     
     public void setNivelCombustivel(double nivelCombustivel){
         this.nivelCombustivel = nivelCombustivel;
     }
-    
-    public void setNumeroPortas(int numeroDePortas){
-        this.numeroDePortas = numeroDePortas;
+
+    public void setCilindradas(int cilindradas){
+        this.cilindradas = cilindradas;
     }
-    
+
     @Override
     public void manutencao() {
-        System.out.println("Manutenção de carro: verificando óleo e pneus");
+        System.out.println("Manutenção de moto: verificando corrente");
     }
     
 }
