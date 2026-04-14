@@ -11,8 +11,8 @@ public class Caminhao extends Veiculo {
     private double nivelCombustivel;
     private int numeroDePortas;
 
-    public Caminhao(String nome, double valorVenal) {
-        super(nome, valorVenal);
+    public Caminhao(String placa, double valorVenal) {
+        super(placa, valorVenal);
         calcularIpva();
     }
 
@@ -51,6 +51,12 @@ public class Caminhao extends Veiculo {
 
 
     // GETTERS //
+
+    public String getCor(){
+        return cor;
+    }
+
+
     public String getMarca() {
         return marca;
     }
